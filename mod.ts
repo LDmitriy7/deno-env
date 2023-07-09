@@ -7,9 +7,9 @@ class Env {
     return value
   }
   int(key: string) {
-    const value = this.str(key)
+    const value = Number(this.str(key))
     if (!Number.isInteger(value)) throw new EnvError(key, "not int")
-    return Number(value)
+    return value
   }
 }
 
